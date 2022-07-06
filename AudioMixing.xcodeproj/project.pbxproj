@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		299087AF2875D792002B7212 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087AE2875D792002B7212 /* AppDelegate.m */; };
 		299087B22875D792002B7212 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087B12875D792002B7212 /* SceneDelegate.m */; };
-		299087B52875D792002B7212 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087B42875D792002B7212 /* ViewController.m */; };
 		299087B82875D792002B7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299087B62875D792002B7212 /* Main.storyboard */; };
 		299087BB2875D792002B7212 /* AudioMixing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 299087B92875D792002B7212 /* AudioMixing.xcdatamodeld */; };
 		299087BD2875D793002B7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299087BC2875D793002B7212 /* Assets.xcassets */; };
@@ -18,6 +17,10 @@
 		299087CD2875D793002B7212 /* AudioMixingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087CC2875D793002B7212 /* AudioMixingTests.m */; };
 		299087D72875D793002B7212 /* AudioMixingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087D62875D793002B7212 /* AudioMixingUITests.m */; };
 		299087D92875D793002B7212 /* AudioMixingUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087D82875D793002B7212 /* AudioMixingUITestsLaunchTests.m */; };
+		299087E72875D821002B7212 /* AudioMixingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087E62875D821002B7212 /* AudioMixingViewController.m */; };
+		299087EC2875E3A1002B7212 /* track3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299087E92875E3A1002B7212 /* track3.mp3 */; };
+		299087ED2875E3A1002B7212 /* track2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299087EA2875E3A1002B7212 /* track2.mp3 */; };
+		299087EE2875E3A1002B7212 /* track1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299087EB2875E3A1002B7212 /* track1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +46,6 @@
 		299087AE2875D792002B7212 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		299087B02875D792002B7212 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		299087B12875D792002B7212 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		299087B32875D792002B7212 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		299087B42875D792002B7212 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		299087B72875D792002B7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		299087BA2875D792002B7212 /* AudioMixing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioMixing.xcdatamodel; sourceTree = "<group>"; };
 		299087BC2875D793002B7212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +57,11 @@
 		299087D22875D793002B7212 /* AudioMixingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioMixingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		299087D62875D793002B7212 /* AudioMixingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioMixingUITests.m; sourceTree = "<group>"; };
 		299087D82875D793002B7212 /* AudioMixingUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioMixingUITestsLaunchTests.m; sourceTree = "<group>"; };
+		299087E52875D821002B7212 /* AudioMixingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioMixingViewController.h; sourceTree = "<group>"; };
+		299087E62875D821002B7212 /* AudioMixingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioMixingViewController.m; sourceTree = "<group>"; };
+		299087E92875E3A1002B7212 /* track3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track3.mp3; sourceTree = "<group>"; };
+		299087EA2875E3A1002B7212 /* track2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track2.mp3; sourceTree = "<group>"; };
+		299087EB2875E3A1002B7212 /* track1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		299087A12875D792002B7212 = {
 			isa = PBXGroup;
 			children = (
+				299087E82875E3A1002B7212 /* sample_audio */,
 				299087AC2875D792002B7212 /* AudioMixing */,
 				299087CB2875D793002B7212 /* AudioMixingTests */,
 				299087D52875D793002B7212 /* AudioMixingUITests */,
@@ -106,12 +113,12 @@
 		299087AC2875D792002B7212 /* AudioMixing */ = {
 			isa = PBXGroup;
 			children = (
+				299087E52875D821002B7212 /* AudioMixingViewController.h */,
+				299087E62875D821002B7212 /* AudioMixingViewController.m */,
 				299087AD2875D792002B7212 /* AppDelegate.h */,
 				299087AE2875D792002B7212 /* AppDelegate.m */,
 				299087B02875D792002B7212 /* SceneDelegate.h */,
 				299087B12875D792002B7212 /* SceneDelegate.m */,
-				299087B32875D792002B7212 /* ViewController.h */,
-				299087B42875D792002B7212 /* ViewController.m */,
 				299087B62875D792002B7212 /* Main.storyboard */,
 				299087BC2875D793002B7212 /* Assets.xcassets */,
 				299087BE2875D793002B7212 /* LaunchScreen.storyboard */,
@@ -137,6 +144,16 @@
 				299087D82875D793002B7212 /* AudioMixingUITestsLaunchTests.m */,
 			);
 			path = AudioMixingUITests;
+			sourceTree = "<group>";
+		};
+		299087E82875E3A1002B7212 /* sample_audio */ = {
+			isa = PBXGroup;
+			children = (
+				299087E92875E3A1002B7212 /* track3.mp3 */,
+				299087EA2875E3A1002B7212 /* track2.mp3 */,
+				299087EB2875E3A1002B7212 /* track1.mp3 */,
+			);
+			path = sample_audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299087EC2875E3A1002B7212 /* track3.mp3 in Resources */,
 				299087C02875D793002B7212 /* LaunchScreen.storyboard in Resources */,
+				299087EE2875E3A1002B7212 /* track1.mp3 in Resources */,
+				299087ED2875E3A1002B7212 /* track2.mp3 in Resources */,
 				299087BD2875D793002B7212 /* Assets.xcassets in Resources */,
 				299087B82875D792002B7212 /* Main.storyboard in Resources */,
 			);
@@ -270,10 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				299087C32875D793002B7212 /* main.m in Sources */,
-				299087B52875D792002B7212 /* ViewController.m in Sources */,
 				299087AF2875D792002B7212 /* AppDelegate.m in Sources */,
 				299087BB2875D792002B7212 /* AudioMixing.xcdatamodeld in Sources */,
 				299087B22875D792002B7212 /* SceneDelegate.m in Sources */,
+				299087E72875D821002B7212 /* AudioMixingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XRLMZ2LJQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioMixing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -472,6 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XRLMZ2LJQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioMixing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
