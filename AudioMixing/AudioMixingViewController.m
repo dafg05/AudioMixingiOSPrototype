@@ -36,16 +36,19 @@
     [self.audioEngine attachNode:self.mixer];
     [self.audioEngine connect:self.mixer to:self.audioEngine.outputNode format:nil];
     
+    // ISSUE:
     // Don't know how or what to pass as a parameter to startAndReturnError
+    // My current attempt:
     NSError * __autoreleasing *startError = NULL;
     BOOL results = [self.audioEngine startAndReturnError:startError];
+    //
     if (results){
-        // code block never reached -- results always false, meaning audio engine not starting
+        // ISSUE: code block never reached -- results always false, meaning audio engine not starting
         for (NSURL *fileUrl in self.fileUrlArray){
             AVAudioPlayerNode *audioPlayer = [[AVAudioPlayerNode alloc] init];
             [self.audioEngine attachNode:audioPlayer];
             
-            // Same issue: don't know how (or what) to pass in as an error parameter to initForReading
+            // ISSUE: similar to first issue, don't know how (or what) to pass in as an error parameter to initForReading
             NSError * __autoreleasing *readingError = NULL;
             AVAudioFile *file = [[AVAudioFile alloc] initForReading:fileUrl error:readingError];
             
