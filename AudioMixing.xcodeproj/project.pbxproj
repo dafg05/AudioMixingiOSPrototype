@@ -17,7 +17,7 @@
 		299087CD2875D793002B7212 /* AudioMixingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087CC2875D793002B7212 /* AudioMixingTests.m */; };
 		299087D72875D793002B7212 /* AudioMixingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087D62875D793002B7212 /* AudioMixingUITests.m */; };
 		299087D92875D793002B7212 /* AudioMixingUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087D82875D793002B7212 /* AudioMixingUITestsLaunchTests.m */; };
-		299087E72875D821002B7212 /* AudioMixingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087E62875D821002B7212 /* AudioMixingViewController.m */; };
+		299087E72875D821002B7212 /* AVAudioEngineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 299087E62875D821002B7212 /* AVAudioEngineVC.m */; };
 		299087EC2875E3A1002B7212 /* track3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299087E92875E3A1002B7212 /* track3.mp3 */; };
 		299087ED2875E3A1002B7212 /* track2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299087EA2875E3A1002B7212 /* track2.mp3 */; };
 		299087EE2875E3A1002B7212 /* track1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 299087EB2875E3A1002B7212 /* track1.mp3 */; };
@@ -57,8 +57,8 @@
 		299087D22875D793002B7212 /* AudioMixingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioMixingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		299087D62875D793002B7212 /* AudioMixingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioMixingUITests.m; sourceTree = "<group>"; };
 		299087D82875D793002B7212 /* AudioMixingUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioMixingUITestsLaunchTests.m; sourceTree = "<group>"; };
-		299087E52875D821002B7212 /* AudioMixingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioMixingViewController.h; sourceTree = "<group>"; };
-		299087E62875D821002B7212 /* AudioMixingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioMixingViewController.m; sourceTree = "<group>"; };
+		299087E52875D821002B7212 /* AVAudioEngineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVAudioEngineVC.h; sourceTree = "<group>"; };
+		299087E62875D821002B7212 /* AVAudioEngineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVAudioEngineVC.m; sourceTree = "<group>"; };
 		299087E92875E3A1002B7212 /* track3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track3.mp3; sourceTree = "<group>"; };
 		299087EA2875E3A1002B7212 /* track2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track2.mp3; sourceTree = "<group>"; };
 		299087EB2875E3A1002B7212 /* track1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track1.mp3; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 		299087AC2875D792002B7212 /* AudioMixing */ = {
 			isa = PBXGroup;
 			children = (
-				299087E52875D821002B7212 /* AudioMixingViewController.h */,
-				299087E62875D821002B7212 /* AudioMixingViewController.m */,
+				299087E52875D821002B7212 /* AVAudioEngineVC.h */,
+				299087E62875D821002B7212 /* AVAudioEngineVC.m */,
 				299087AD2875D792002B7212 /* AppDelegate.h */,
 				299087AE2875D792002B7212 /* AppDelegate.m */,
 				299087B02875D792002B7212 /* SceneDelegate.h */,
@@ -293,7 +293,7 @@
 				299087AF2875D792002B7212 /* AppDelegate.m in Sources */,
 				299087BB2875D792002B7212 /* AudioMixing.xcdatamodeld in Sources */,
 				299087B22875D792002B7212 /* SceneDelegate.m in Sources */,
-				299087E72875D821002B7212 /* AudioMixingViewController.m in Sources */,
+				299087E72875D821002B7212 /* AVAudioEngineVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

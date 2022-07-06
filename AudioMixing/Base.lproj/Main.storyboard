@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Audio Mixing View Controller-->
+        <!--Audio EngineVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AudioMixingViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AVAudioEngineVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                                 <rect key="frame" x="34" y="307" width="130" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Play/Pause"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play/Stop"/>
                                 <connections>
                                     <action selector="didTapTrack3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfs-Jl-rOt"/>
                                 </connections>

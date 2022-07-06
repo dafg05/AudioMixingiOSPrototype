@@ -5,13 +5,10 @@
 //  Created by Daniel Flores Garcia on 7/6/22.
 //
 
-#import "AudioMixingViewController.h"
-//#import "AVFAudio/AVAudioEngine.h"
-//#import "AVFAudio/AVAudioMixerNode.h"
-//#import "AVFAudio/AVAudioPlayerNode.h"
+#import "AVAudioEngineVC.h"
 #import "AVFAudio/AVFAudio.h"
 
-@interface AudioMixingViewController ()
+@interface AVAudioEngineVC ()
 
 @property (strong,nonatomic) AVAudioEngine *audioEngine;
 @property (strong,nonatomic) AVAudioMixerNode *mixerNode;
@@ -19,7 +16,7 @@
 
 @end
 
-@implementation AudioMixingViewController
+@implementation AVAudioEngineVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
