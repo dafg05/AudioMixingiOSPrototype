@@ -13,9 +13,9 @@
 
 @interface AudioMixingViewController ()
 
-@property (weak,nonatomic) AVAudioEngine *audioEngine;
-@property (weak,nonatomic) AVAudioMixerNode *mixer;
-@property (strong,nonatomic) NSMutableArray *fileUrlArray;
+@property (strong,nonatomic) AVAudioEngine *audioEngine;
+@property (strong,nonatomic) AVAudioMixerNode *mixerNode;
+@property (strong,nonatomic) NSMutableArray *filePathArray;
 
 @end
 
@@ -24,36 +24,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Hard code file URLs
-    [self.fileUrlArray addObject:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"track1" ofType:@"mp3"]]];
-    [self.fileUrlArray addObject:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"track2" ofType:@"mp3"]]];
-    [self.fileUrlArray addObject:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"track2" ofType:@"mp3"]]];
-    
+    self.filePathArray = [[NSMutableArray alloc] init];
+    NSString *pathToUrl1 = [[NSBundle mainBundle] pathForResource:@"track1" ofType:@"mp3"];
+    NSString *pathToUrl2 = [[NSBundle mainBundle] pathForResource:@"track2" ofType:@"mp3"];
+    NSString *pathToUrl3 = [[NSBundle mainBundle] pathForResource:@"track3" ofType:@"mp3"];
+    [self.filePathArray addObject:pathToUrl1];
+    [self.filePathArray addObject:pathToUrl2];
+    [self.filePathArray addObject:pathToUrl3];
 }
 - (IBAction)didTapAVAudioEngine:(id)sender {
     // code from: https://medium.com/@ian.mundy/audio-mixing-on-ios-4cd51dfaac9a
-    // originally in swift
-    NSLog(@"On AVAudioEngine");
-    [self.audioEngine attachNode:self.mixer];
-    [self.audioEngine connect:self.mixer to:self.audioEngine.outputNode format:nil];
+    NSLog(@"file count: %lu", self.filePathArray.count);
+    self.audioEngine = [[AVAudioEngine alloc] init];
+    self.mixerNode = [[AVAudioMixerNode alloc] init];
     
-    // ISSUE:
-    // Don't know how or what to pass as a parameter to startAndReturnError
-    // My current attempt:
+    NSLog(@"On AVAudioEngine"); 
+    [self.audioEngine attachNode:self.mixerNode];
+    [self.audioEngine connect:self.mixerNode to:self.audioEngine.outputNode format:nil];
+    
     NSError * __autoreleasing *startError = NULL;
     BOOL results = [self.audioEngine startAndReturnError:startError];
-    //
     if (results){
-        // ISSUE: code block never reached -- results always false, meaning audio engine not starting
-        for (NSURL *fileUrl in self.fileUrlArray){
-            AVAudioPlayerNode *audioPlayer = [[AVAudioPlayerNode alloc] init];
-            [self.audioEngine attachNode:audioPlayer];
+        for (NSString *filePath in self.filePathArray){
+            NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
             
-            // ISSUE: similar to first issue, don't know how (or what) to pass in as an error parameter to initForReading
+            AVAudioPlayerNode *playerNode = [[AVAudioPlayerNode alloc] init];
+            [self.audioEngine attachNode:playerNode];
+            
             NSError * __autoreleasing *readingError = NULL;
-            AVAudioFile *file = [[AVAudioFile alloc] initForReading:fileUrl error:readingError];
+            AVAudioFile *file = [[AVAudioFile alloc] initForReading:fileUrl.absoluteURL error:readingError];
             
-            [audioPlayer scheduleFile:file atTime:nil completionHandler:nil];
-            [audioPlayer play];
+            [self.audioEngine connect:playerNode to:self.mixerNode format:file.processingFormat];
+            
+            [playerNode scheduleFile:file atTime:nil completionHandler:nil];
+            [playerNode play];
         }
     }
 }
